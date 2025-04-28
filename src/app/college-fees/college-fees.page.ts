@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-college-fees',
@@ -8,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollegeFeesPage implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+ constructor(private navCTRL: NavController) { }
+ 
+   ngOnInit() {
+   }
+ navigateToHome() {
+     this.navCTRL.navigateRoot('/home');}
+ 
+ navigateToGroceries() {
+     this.navCTRL.navigateForward('/groceries');}
+ 
+ navigateToElectricityBills() {
+     this.navCTRL.navigateForward('/electricity-bills');}
+ 
+ navigateToOthers() {
+     this.navCTRL.navigateForward('/others');}
+ 
+ }

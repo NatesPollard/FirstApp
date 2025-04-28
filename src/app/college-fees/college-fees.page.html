@@ -4,10 +4,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">College-fees</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-button [routerLink]="['/college-fees']">College Fees</ion-button>
+  <ion-button (click)="navigateToElectricityBills()">Electricity Bills</ion-button>
+  <ion-button (click)="navigateToGroceries()" >Groceries</ion-button>  
+  <ion-button (click)="navigateToHome()">Home</ion-button>
+  <ion-button (click)="navigateToOthers()">Other</ion-button>
 </ion-content>
